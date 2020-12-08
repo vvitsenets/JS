@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+function ds() {
+var r = document.form1.a.value;
+var elements = document.getElementsByTagName('input');
+var R;
+for(var i=1; i < elements.length; i++){
+if(elements[i].checked){
+switch (elements[i].id) {
+case 'l':
+R = 2 * 3.14 * r;
+break;
+case 's':
+R = 3.14 * r*r;
+break;
+case 'v':
+R = (4 / 3) * 3.14 * r*r*r;
+break;
+case 'kv':
+R = r * r;
+break;
+case 'kr':
+R = 3.14 * r*r;
+break;
+case 'tr':
+R = 0.5 * r*r;
+break;
+case 'mr':
+R = 3.14 * r;
+break;
+case 'mt':
+V = ((4 / 3) * 3.14) * r*r*r;
+break;
+default:}}}
+document.getElementById('res').value = R;}
+</script>
+</head>
+
+<body>
+<header>
+
+</header>
+<form name="form1">
+<h3>введіть значення сторони квадрата/радіуса/катета: </h3>
+а=<input type="text" name="a" size=10><br>
+<input id="kv" type="radio" name="fv" value="1" onClick="ds()">Площа квадрата<br>
+<input id="kr" type="radio" name="fv" value="3.14" onClick="ds()">Площа круга<br>
+<input id="tr" type="radio" name="fv" value="0.5" onClick="ds()">Площа прямокутного
+трикутника<br>
+<input id="mr" type="radio" name="fv" value="3.14" onClick="ds()">Довжина кола<br>
+<input id="mt" type="radio" name="fv" value="4.1" onClick="ds()">Об'єм кулі<br>
+Площа: <input id="res" type="text" name="res" size=10>
+</form>
+<footer>
+	
+</footer>
+</body>
